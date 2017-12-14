@@ -22,7 +22,24 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+Connect MailHog client:
+
+```ruby
+client = MailData::MailHogClient.new('<url>')
+```
+
+Fetch the user email:
+
+```ruby
+client.find_message('<kind>','<query>')
+```
+
+Delete all messages:
+
+```ruby
+client.delete_all_mails
+```
+
 
 ## Development
 
