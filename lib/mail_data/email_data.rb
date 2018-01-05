@@ -32,8 +32,7 @@ module MailData
 
 		def prepare_data(part)
 			{
-				type: part['Headers']['Content-Type'].first.split(';').first,
-				body: part['Body']
+				"#{part['Headers']['Content-Type'].first.split(';').first}" => part['Body']
 			}
 		end
 
