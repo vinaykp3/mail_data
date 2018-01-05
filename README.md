@@ -8,21 +8,26 @@ TODO: Delete this and the text above, and describe your gem
 
 Add this line to your application's Gemfile:
 
-```ruby
-gem 'mail_data'
-```
-
-And then execute:
-
-    $ bundle
-
-Or install it yourself as:
-
-    $ gem install mail_data
-
 ## Usage
 
-TODO: Write usage instructions here
+Connect MailHog client:
+
+```ruby
+client = MailData::MailHogClient.new('<url>')
+```
+
+Fetch the user email:
+
+```ruby
+client.find_message('<kind>','<query>')
+```
+
+Delete all messages:
+
+```ruby
+client.delete_all_mails
+```
+
 
 ## Development
 
